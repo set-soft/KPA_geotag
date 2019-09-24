@@ -21,6 +21,7 @@ my $filename='index.xml';
 # Format: (encoded as the default Perl encoding i.e. ISO-8859-1)
 # Place    Latitude,Longitude
 my $gps_places='gps_places.txt';
+#my $gps_places='gps_fix.txt';
 # A special place to be ignored
 my %sin_lugar=
    (
@@ -136,6 +137,7 @@ foreach my $image (@images)
           else
             {
              Warning($file,'without `Place\'');
+             $no_upd++;
             }
          }
       }
